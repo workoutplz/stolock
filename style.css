@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.door {
+    height: 100vh;
+    width: 49.7%;
+    display: inline-block;
+}
+
+
+#left {
+    background-color: red;
+    animation: move-left-ani 15s linear forwards;
+}
+
+#right {
+    background-color: blue;
+    animation: move-right-ani 15s linear forwards;
+}
+
+@keyframes move-right-ani {
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(100vw, 0);
+    }
+}
+
+@keyframes move-left-ani {
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(-100vw, 0);
+    }
+}
+
+.card {
+    position: fixed;
+    top: 5vh;
+    left: 20vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: -1;
+}
+
+.content {
+    width: 20vw;
+    height: 20vh;
+}
+#cameraview {
+    margin: 20px;
+}
+/* 
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} */
