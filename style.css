@@ -3,23 +3,28 @@
     padding: 0;
 }
 
+.door-container {
+    z-index: 1;
+}
 .door {
-    height: 100vh;
+    height:200vh;
     width: 49.7%;
     display: inline-block;
+    z-index: 1;
 }
 
 
 #left {
     background-color: red;
-    animation: move-left-ani 15s linear forwards;
+    /* animation: move-left-ani 15s linear forwards; */
 }
 
 #right {
     background-color: blue;
-    animation: move-right-ani 15s linear forwards;
+    /* animation: move-right-ani 15s linear forwards; */
 }
 
+/*
 @keyframes move-right-ani {
     from {
         transform: translate(0, 0);
@@ -37,7 +42,7 @@
         transform: translate(-100vw, 0);
     }
 }
-
+*/
 .card {
     position: fixed;
     top: 5vh;
@@ -46,11 +51,13 @@
     flex-direction: column;
     align-items: center;
     z-index: -1;
+    border: solid;
 }
 
-.content {
+#content {
     width: 20vw;
     height: 20vh;
+    z-index: 2;
 }
 #cameraview {
     margin: 20px;
@@ -61,3 +68,15 @@
     flex-direction: column;
     align-items: center;
 } */
+
+body {
+    background-color: black;
+    height: 200vh;
+}
+.title {
+    color: #aaa;
+}
+
+canvas {
+    display: none;
+}

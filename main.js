@@ -25,3 +25,29 @@ function mainInit() {
         .catch(camInitFailed);
 
 }
+
+const left_scroll = document.querySelector("#left")
+window.addEventListener('scroll', function() {
+    let value = 1 + window.scrollY;
+    console.log(value);
+    left_scroll.style.transform = `translate(-${value}px, 0)`;
+})
+
+const right_scroll = document.querySelector("#right")
+window.addEventListener('scroll', function() {
+    let value = 1 + window.scrollY;
+    console.log(value);
+    right_scroll.style.transform = `translate(${value}px, 0)`;
+})
+
+const content_form = document.querySelector("#content-form")
+const canvas = document.querySelector("#canvas")
+const video = document.querySelector("video")
+window.addEventListener('submit', function(e){
+    e.preventDefault();
+    canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height)
+    let image_data_url = canvas.toDataURL('image/jpeg');
+    console.log(image_data_url)
+    video.style.display = 'none'
+    canvas.style.display = 'block'
+})
