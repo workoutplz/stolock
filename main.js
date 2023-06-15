@@ -43,6 +43,7 @@ window.addEventListener('scroll', function() {
 const content_form = document.querySelector("#content-form")
 const canvas = document.querySelector("#canvas")
 const video = document.querySelector("video")
+const card = document.querySelector(".card")
 window.addEventListener('submit', function(e){
     e.preventDefault();
     canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height)
@@ -50,4 +51,5 @@ window.addEventListener('submit', function(e){
     console.log(image_data_url)
     video.style.display = 'none'
     canvas.style.display = 'block'
+    card.classList.add("print")
 })

@@ -46,7 +46,7 @@
 .card {
     position: fixed;
     top: 5vh;
-    left: 20vw;
+    left: 30vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -54,6 +54,12 @@
     border: solid;
 }
 
+.print {
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    border-radius: 1.5rem;
+    padding: 20px;
+}
 #content {
     width: 20vw;
     height: 20vh;
@@ -74,7 +80,7 @@ body {
     height: 200vh;
 }
 .title {
-    color: #aaa;
+    color: #fff;
 }
 
 canvas {
