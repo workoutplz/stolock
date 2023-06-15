@@ -86,3 +86,10 @@ body {
 canvas {
     display: none;
 }
+
+#passwd {
+    color: #fff;
+    text-align: center;
+    margin-top: 10px;
+    display: none
+}
