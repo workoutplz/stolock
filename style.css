@@ -93,3 +93,9 @@ canvas {
     margin-top: 10px;
     display: none
 }
+
+.input-content {
+    display: none;
+    color: #fff;
+    font-size: 24pt;
+}

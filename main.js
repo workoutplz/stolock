@@ -45,6 +45,8 @@ const canvas = document.querySelector("#canvas")
 const video = document.querySelector("video")
 const card = document.querySelector(".card")
 const passwd = document.querySelector("#passwd");
+const content = document.querySelector("#content")
+const input_content = document.querySelector(".input-content")
 window.addEventListener('submit', function(e){
     e.preventDefault();
     canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height)
@@ -54,4 +56,8 @@ window.addEventListener('submit', function(e){
     canvas.style.display = 'block'
     card.classList.add("print")
     passwd.style.display = 'inline'
+    input_content.innerText = content.value
+    input_content.style.display = 'block'
+    content.style.display = 'none'
+    console.log(content.value)
 })
